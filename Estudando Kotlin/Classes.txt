@@ -1,0 +1,15 @@
+class Customer                                             //Declarando a classe customer, utilizando o construtor padrão, sem usar nenhum parâmetro adicional
+​
+class Contact(val id: Int, var email: String)              //Classe Contact com o construtor recebendo dois paramentros do tipo val/int e var/string.
+​
+fun main(){
+    
+    val customer = Customer()                              //Não é necessário utilizar o comando new
+    
+    val contact = Contact(1, "kubaszewski001@hotmail.com")
+    
+    println(contact.id)
+    println(contact.email)
+    contact.email = "kubaszewski001@gmail.com"
+    println(contact.email)
+}

@@ -1,0 +1,25 @@
+class MutableStack<E>(vararg items: E) {                //Classe com uma definição de método genérico
+    
+    private val elements = items.toMutableList()        //Elementos que estão chegando como parametro do construtor e convertendo para uma lista.
+    
+    fun push(element: E) = elements.add(element)        //Recebe um elemento do tipo "E" e adiciona esse elemento na lista com o método add 
+    
+    fun peek(): E = elements.last()                     //Selectiona o ultimo elemento sem remover.
+    
+    fun pop(): E = elements.removeAt(elements.size - 1) //Seleciona o ultimo elemento e remove.
+    
+    fun isEmpty() = elements.isEmpty()                  //Verifica se está vazia.
+                                
+    fun size() = elements.size                          //Verifica o tamanho.
+    
+    override fun toString() = "mutableStack(${elements.joinToString()})" //Converter a pilha para texto, ficando mais fácil de visualizar.
+}
+
+fun <E> mutableStackOf(vararg elements: E) = MutableStack(*elements)     //Função recebendo um vararg de elementos, com o tipo genérico E,
+                                                                         //utilizando o * para utilizar o * para passarmos o parametro como vararg.
+fun main(){
+   val stack = mutableStackOf(0.62, 3.14, 2.7)
+   println(stack)
+    
+    }
+}

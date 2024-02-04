@@ -1,0 +1,19 @@
+fun someCondition() = false
+
+fun main(){
+    
+   var a: String = "Inicial"
+    println(a)
+    val b = 1
+    val c = 3                 
+    val d: Int
+    println(b)
+    println(c)
+    if (someCondition()) {
+        d = 1
+    } else {
+        d = 2
+    }
+    println(d)
+    
+}

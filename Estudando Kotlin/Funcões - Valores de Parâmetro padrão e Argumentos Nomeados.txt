@@ -1,0 +1,21 @@
+fun printMessage(message: String): Unit {   //Criando função que recebe uma string como paramentro, 
+    println(message)                         //com Unit que significa que ele não retorna nada, 
+                                             //println imprime message.
+}
+
+fun printMessageComPrefixo(message: String, prefix: String = "Info"){ //Criando uma função que recebe duas strings como parametros.
+    println("[$prefix] $message")                                    //Prefix irá retornar "info" como padrão, caso não receba um valor.
+}
+
+fun sum(x: Int, y: Int): Int {               // Função sum que está recebendo dois inteiros como parametro e retornando um inteiro.                                         
+    return x + y;                            // retornando a soma de x + y.
+}
+
+fun multiply(x: Int, y: Int) = x * y         // Função Multiply recebendo dois inteiros como parametro e retornando a multiplicação dos dois.
+
+fun main(){
+    printMessage("Opa")
+    printMessageComPrefixo("Meu Chapéu", "Dados")
+    printMessageComPrefixo("Opa")
+    printMessageComPrefixo(prefix = "Log", message = "Opa")
+    println(sum(25,25))

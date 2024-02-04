@@ -1,0 +1,5 @@
+package ork.kotlinlang.play //Definição do pacote( Muito comum para organização de código)
+
+fun main (){               //Ponto de entrada de um código kotlin, definido pela função main.
+
+    println("Olá Mundo!")  //Imprime na saída padrão um texto, pulando a linha. 

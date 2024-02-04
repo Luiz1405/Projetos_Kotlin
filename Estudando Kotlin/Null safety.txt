@@ -1,0 +1,19 @@
+fun main(){
+    
+    var neverNull: String = "This can't be null"            //Não podemos atribuir uma string como um valor nulo.
+    //neverNull = null
+    
+    var nullable: String? = "You can Keep a null here"     //Para declararmos uma string nula temos que adicionar um ?.
+    nullable = null
+    
+    var inferredNonNull =  "the compiler assumes non-null" //ele está entendo por inferência que estamos passando uma string e declarando como nulo, mas isso não é
+    //inferredNonNull = null                               //possível, precisamos declarar como string?.
+    
+    
+    fun strLength(str: String): Int {
+        return str?.length ?: 0
+    }
+    
+    println(strLength(neverNull))
+    println(strLength(nullable))
+}

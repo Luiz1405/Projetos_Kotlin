@@ -1,0 +1,19 @@
+fun main(){
+    
+    fun printALL(vararg messages: String){   // Vararg é um tipo de parametro onde recebmemos uma quantidade de elementos indefinidda de um determinado tipo.
+        for (m in messages) println(m)       // Usamos uma estrutura de repetição for onde m recebe messages e logo em seguida m é mostrado na tela com o println.
+    }
+    printALL("OLÁ","OLÁ", "OLÁ", "OLÁ")
+    
+    fun printALLWithPrefix(vararg messages: String, prefix: String){
+        for (m in messages) println(prefix + m)
+    }
+    printALLWithPrefix(
+        "Olá", "Olá", "Olá",
+        prefix = "OPA"
+    )
+    
+    fun Log(vararg entries: String) {  //Aqui temos a função Log chamando uma outra função(printALL) como as duas são vararg precisamos colocar um * no parametro.
+        printALL(*entries)
+    }
+}
